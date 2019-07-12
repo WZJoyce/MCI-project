@@ -1,0 +1,2509 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Websubmission</title>
+	<link rel="stylesheet" href="css/lib/flatpickr/flatpickr.min.css">
+	<link rel="stylesheet" href="css/separate/vendor/flatpickr.min.css">
+	<link rel="stylesheet" href="css/separate/vendor/bootstrap-daterangepicker.min.css">
+	<link rel="stylesheet" href="css/lib/clockpicker/bootstrap-clockpicker.min.css">
+	<link rel="stylesheet" href="css/separate/vendor/bootstrap-select/bootstrap-select.min.css">
+	<link rel="stylesheet" href="css/lib/prism/prism.css">
+	<link rel="stylesheet" href="css/lib/bootstrap-table/bootstrap-table.min.css">
+	<link rel="stylesheet" href="css/lib/bootstrap-table/bootstrap-table-reorder-rows.css">
+	<link rel="stylesheet" href="css/lib/lobipanel/lobipanel.min.css">
+	<link rel="stylesheet" href="css/separate/vendor/lobipanel.min.css">
+	<link rel="stylesheet" href="css/lib/jqueryui/jquery-ui.min.css">
+	<link rel="stylesheet" href="css/separate/pages/widgets.min.css">
+	<link rel="stylesheet" href="css/separate/vendor/bootstrap-select/bootstrap-select.min.css">
+  <link rel="stylesheet" href="css/lib/font-awesome/font-awesome.min.css">
+  <link rel="stylesheet" href="css/lib/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" href="css/main.source.css">
+	<link rel="stylesheet" href="bootstrap-fileinput-master/css/fileinput.min.css">
+	<link rel="stylesheet" href="kartik-v-bootstrap-fileinput/css/fileinput.min.css">
+</head>
+
+<body class="horizontal-navigation">
+		<header class="site-header">
+				<div class="container-fluid">
+					<a href="#" class="site-logo">
+						 <h2 style="font-family:bold">Websubmission</h2>
+					</a>
+					   <div class="site-header-search-container">
+					</div>
+				</div><!--.site-header-collapsed-in-->
+		</header>
+
+		<div class="page-content">
+		<div class="container-fluid">
+			<section class="tabs-section">
+				<div class="tabs-section-nav">
+					<div class="tbl">
+						<ul class="nav" role="tablist">
+							<li class="nav-item" >
+								<a class="nav-link active" href="#tabs-2-tab-1" role="tab" data-toggle="tab">
+									<span class="nav-link-in">
+										Navigation
+									</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#tabs-2-tab-2" role="tab" data-toggle="tab">
+									<span class="nav-link-in">
+									Courses
+									</span>
+								</a>
+							</li>
+					    <li class="nav-item">
+								<a class="nav-link" href="#tabs-2-tab-3" role="tab" data-toggle="tab">
+									<span class="nav-link-in" id="assignmentTab" style="display:none;">
+										Assignments
+									</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#tabs-2-tab-4" role="tab" data-toggle="tab">
+									<span class="nav-link-in" id="classistTab" style="display:none;">
+										Classlist
+									</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#tabs-2-tab-5" role="tab" data-toggle="tab">
+									<span class="nav-link-in" id="submissionTab" style="display:none;">
+										Make a submission and View feedback
+									</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div><!--.tabs-section-nav-->
+
+        <!--.tabs-content-->
+				<div class="tab-content">
+				  <!--.navigation page-->
+					<div role="tabpanel" class="tab-pane fade in active show" id="tabs-2-tab-1">
+							<div class="row">
+									<div class="col-xl-4">
+											<section class="box-typical box-typical-dashboard">
+												<header class="box-typical-header">
+													<div class="tbl-row">
+														<div class="tbl-cell tbl-cell-title">
+															<h3>Year & Teaching Period</h3>
+														</div>
+														<div class="tbl-cell tbl-cell-actions">
+															<button type="button" class="action-btn action-btn-expand">
+																<i class="font-icon font-icon-expand"></i>
+															</button>
+														</div>
+													</div>
+												</header>
+												<div class="box-typical-body">
+													<table class="tbl-typical">
+														<tr>
+															<th><div>Details</div></th>
+															<th><div>Status</div></th>
+														</tr>
+														<form id="form" name="form" method="POST">
+														<tr>
+															<td>
+																<span>Year</span>
+															</td>
+															<td>
+															<fieldset class="form-group">	
+															<select class="select2" id="selection1" name="Year">
+																<option value="2019">2019</option>
+																<option value="2020">2020</option>
+															</select>
+															</fieldset>	
+															</td>	
+														</tr>
+														<tr>
+																<td>
+																	<span>Teaching period</span>
+																</td>
+																<td>
+																<fieldset class="form-group">
+																<select class="select2" id="selection2" name="Teachingperiod" >
+																		<option value="Semester1">Semester 1</option>
+																		<option value="Semester2">Semester 2</option>
+																		<option value="SummerSemester">Summer Semester</option>
+																		<option value="WinterSemester">Winter Semester</option>
+																		<option value="Term1">Term 1</option>
+																		<option value="Term2">Term 2</option>
+																		<option value="Term3">Term 3</option>
+																		<option value="Term4">Term 4</option>
+																</select>
+																</fieldset>	
+																</td>
+													  </tr>
+													</form>
+													</table>
+												</div>
+											</section>
+									</div>
+										<div class="col-xl-4">
+										<section class="box-typical" >
+										 <div id="toolbar"class="myfont">Course</div>
+											<div class="table settingheight">
+												<table id="table"
+													data-toolbar="#toolbar"
+													data-pagination="true"
+													data-search="true"
+													data-use-row-attr-func="true"
+													data-reorderable-rows="true"
+													data-url="courseList.json"
+													data-click-to-select="true"
+													data-single-select="true"
+													>
+													<thead>
+													<tr>
+														<th data-field="Course" data-sortable="true">Course</th>	
+													</tr>
+													</thead>
+												</table>
+											</div>
+										</section>
+									   </div>
+									   <div class="col-xl-4">
+										<section class="box-typical" >
+											<div id="toolbar2" class="myfont">Assignment</div>
+											<div class="table settingheight">
+												<table id="table2"
+													data-toolbar="#toolbar2"
+													data-pagination="true"
+													data-search="true"
+													data-use-row-attr-func="true"
+													data-reorderable-rows="true"
+													data-url="assignmentList.json"
+													data-click-to-select="true"
+													data-single-select="true">
+												<thead>
+													<tr>
+														<th data-field="Assignment" data-sortable="true">Assignment</th>		
+													</tr>
+												</thead>
+												</table>
+											</div>
+										</section>
+									 </div>
+								</div>
+						 </div>
+					<!--.manage course-->
+					<div role="tabpanel" class="tab-pane fade" id="tabs-2-tab-2">
+							<div class="row">
+									<div class="col-xl-7">	
+									<section class="box-typical ">
+											<div id="toolbarCourse" class="myfont">
+													Current Course</div>
+											<div class="table settingheight">
+											<table id="tableCourse"
+												 data-toolbar="#toolbarCourse"
+												 data-pagination="true"
+												 data-search="true"
+												 data-use-row-attr-func="true"
+												 data-reorderable-rows="true"
+									       data-url=""
+												 data-click-to-select="true"
+												 data-single-select="true">
+											<thead>
+												<tr>
+												<th data-field="CourseDirectory" data-sortable="true">Course Directory</th>
+												<th data-field="AnchorText2" data-sortable="true">Anchor Text</th>
+											  </tr>
+										  </thead>
+											</table>
+										</div>
+									</section>
+								</div>	
+								<div class="col-xl-4">
+										<section class="box-typical box-typical-dashboard ">
+											<header class="box-typical-header">
+												<div class="tbl-row">
+													<div class="tbl-cell tbl-cell-title">
+														<h3>Create New Course</h3>
+													</div>
+													<div class="tbl-cell tbl-cell-actions">
+														<button type="button" class="action-btn action-btn-expand">
+															<i class="font-icon font-icon-expand"></i>
+														</button>
+													</div>
+												</div>
+											</header>
+											<div class="box-typical-body">
+												<table class="tbl-typical">
+													<tr>
+														<th><div>Details</div></th>
+														<th><div></div></th>
+													</tr>
+													<form id="formCourse" name="formCourse" method="POST">
+														<tr>
+														<td>
+															<label class="form-lable">Anchor Text:</lable>
+														</td>
+														<td>
+															<fieldset class="form-group">
+																<input name="AnchorText2"
+																			 type="text"
+																			 class="form-control form-control-blue-fill">
+															</fieldset>
+														</td>	
+														</tr>
+													 <tr>
+														 <td>
+															<fieldset class="form-group">
+																<button type="button" class="btn btn-rounded btn-inline btn-primary" id="submitCourse">Submit</button>
+															</fieldset>	
+														</td>
+													 </tr>
+												 </form>
+												</table>
+											</div>
+										</section>
+									</div>
+									</div>
+						</div>
+					<!--.manage assignment-->
+					<div role="tabpanel" class="tab-pane fade" id="tabs-2-tab-3">
+							<div class="row">
+								<div class="col-xl-7">	
+									<section class="box-typical">
+										<div id="toolbar4" class="myfont">
+													Current Assignments</div>
+										<div class="table settingheight">
+											<table id="table4"
+												 data-toolbar="#toolbar4"
+												 data-pagination="true"
+												 data-search="true"
+												 data-use-row-attr-func="true"
+												 data-reorderable-rows="true"
+									       data-url="assignmentList.json"
+												 data-click-to-select="true"
+												 data-single-select="true">
+											<thead>
+												<tr>
+												<th data-field="AnchorText" data-sortable="true" >Assignment Key</th>
+												<th data-field="RepositoryPath1" data-sortable="true">Repository Path</th>
+												<th data-field="AnchorText1" data-sortable="true">Anchor Text</th>
+												<th data-field="Details" >Details</th>
+											  </tr>
+										  </thead>
+										</table>
+										</div>
+									</section>
+								</div>	
+								<div class="col-xl-4">
+										<section class="box-typical box-typical-dashboard">
+											<header class="box-typical-header">
+												<div class="tbl-row">
+													<div class="tbl-cell tbl-cell-title">
+														<h3>Create New Assignment</h3>
+													</div>
+													<div class="tbl-cell tbl-cell-actions">
+														<button type="button" class="action-btn action-btn-expand">
+															<i class="font-icon font-icon-expand"></i>
+														</button>
+													</div>
+												</div>
+											</header>
+											<div class="box-typical-body" >
+												<table class="tbl-typical">
+													<tr>
+														<th><div>Details</div></th>
+														<th><div></div></th>
+													</tr>
+													<form id="form1" name="form1" method="POST">
+														<tr>
+														<td>
+																<label class="form-lable">Anchor Text:</lable>
+														</td>
+														<td>
+															<fieldset class="form-group">
+																<input name="AnchorText"
+																			 type="text"
+																			 class="form-control form-control-blue-fill">
+															</fieldset>
+														</td>	
+														</tr>
+													 <tr>
+														 <td>
+															<fieldset class="form-group">
+																<button type="button" class="btn btn-rounded btn-inline btn-primary" id="submit1">Submit</button>
+															</fieldset>	
+														</td>
+													 </tr>
+												 </form>
+												</table>
+											</div>
+										</section>
+									</div>
+							</div>
+					</div>
+					<!--.upload code-->
+					<div role="tabpanel" class="tab-pane fade" id="tabs-2-tab-4">
+							<div class="row" >
+									<div class="col-xl-3" >
+										<input type="file" id="uploadfeedback" name="feedback"/>
+										<div style="position:relative ;top:10px" class="myfont">	Upload a marks and Feedback File</div>
+									</div>
+									<section class="box-typical" style="width: 900px">
+										<div id="toolbarnumber"class="myfont">
+											<a download="All Code" class="btn btn-rounded btn-inline btn-primary" id="downloadallcode">Download Code</a>
+										</div>
+										<div class="table-responsive settingheight">
+											<table id="tablenumber"
+											data-show-export="true"
+											data-pageList="true"
+											data-toolbar="#toolbarnumber"
+											data-pagination="true"
+											data-search="true"
+											data-use-row-attr-func="true"
+											data-reorderable-rows="true"
+											data-url="submissionList.json"
+											>
+											<thead>
+										 		<tr>
+													<th data-field="IDandName"  data-sortable="true">ID and Name</th>
+													<th data-field="Mark" data-sortable="true">Mark</th>
+													<th data-field="ManualMark" data-sortable="true">Manual Mark</th>
+													<th data-field="Comment" data-sortable="true">Comment</th>
+												</tr>
+											</thead>
+										</table>
+									</div>
+								</section>
+							</div>
+					</div>
+					<!--.make submission-->
+					<div role="tabpanel" class="tab-pane fade" id="tabs-2-tab-5">
+							<div class="row" >
+									<div class="col-xl-3" >
+											<input type="file" id="makesubmission" name="file"/>
+										<div style="position:relative ;top:10px" class="myfont">	Make submission</div>
+									</div>
+									<div class="col-xl-4">
+											<section class="box-typical ">
+										
+													<div id="toolbarsubmission" class="myfont">Submission</div>
+												<div class="table settingheight">
+													<table id="tablesubmission"
+														data-toolbar="#toolbarsubmission"
+														data-pagination="true"
+														data-search="true"
+														data-use-row-attr-func="true"
+														data-reorderable-rows="true"
+														data-url="submissionList.json"
+														data-click-to-select="true"
+														data-single-select="true"
+														>
+														<thead>
+														<tr>
+															<th data-field="submission" data-sortable="true">Submission</th>
+															<th data-field="submissionScore" data-sortable="true">Score</th>
+														</tr>
+														</thead>
+													</table>
+												</div>
+								</div>
+								<div class="col-xl-5">
+										<section class="box-typical">
+											<div id="toolbarfeedback" class="myfont">Feedback</div>
+											<div class="table settingheight" >
+												<table id="tablefeedback"
+													data-toolbar="#toolbarfeedback"
+													data-pagination="true"
+													data-use-row-attr-func="true"
+													data-reorderable-rows="true"
+													data-url="submissionList.json"
+													data-click-to-select="true"
+													data-single-select="true"
+													>
+													<thead>
+													<tr>
+														<th data-field="feedback">Feedback</th>	
+													</tr>
+													</thead>
+												</table>
+											</div>
+										</div>
+						</div>
+					<div role="tabpanel" class="tab-pane fade" id="tabs-2-tab-6">Tab 6</div><!--.tab-pane-->
+				</div><!--.tab-content-->
+			</section>
+		</div><!--.container-fluid-->
+	</div><!--.page-content-->
+<!--floating window for assignment-->
+	<div class="modal fade modal-upload-default" id="upload" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content" style="width:1200px;">
+						<div class="modal-header">
+							<button type="button" class="modal-close" data-dismiss="modal" aria-label="Close">
+								<i class="font-icon-close-2"></i>
+							</button>
+							<h4 class="modal-title" id="myModalLabel">Reconfiguration</h4>
+						</div>
+						<div class="modal-upload menu-big-icons" style="height:800px">
+								<div class="row" >
+												<div class="col-xl-3" >
+													<section class=" box-typical box-typical-dashboard">
+														<header class="box-typical-header">
+															<div class="tbl-row">
+																<div class="tbl-cell tbl-cell-title">
+																	<h3>Assignment Details</h3>
+																</div>
+																<div class="tbl-cell tbl-cell-actions">
+																	<button type="button" class="action-btn action-btn-expand">
+																		<i class="font-icon font-icon-expand"></i>
+																	</button>
+																</div>
+															</div>
+														</header>
+														<div class="box-typical-body">
+															<table class="tbl-typical">
+																<tr>
+																	<th><div>Details</div></th>
+																	<th><div>Status</div></th>
+																</tr>
+																<tr>
+							
+																	<form id="formpop1" name="formpop1" method="POST">
+																	<td>
+																			<label class="form-lable">Anchor Text:</lable>
+																	</td>
+																	<td>
+																		<fieldset class="form-group">
+																			<input name="Anchortext"
+																					   type="text"
+																					   class="form-control form-control-blue-fill"id="Anchortext">
+																		</fieldset>
+																		<fieldset class="form-group">
+																			<button type="button" class="btn btn-rounded btn-inline btn-primary" id="submitpop1">update</button>
+																		</fieldset>		
+																  </td>	
+																	</form>
+																</tr>
+																<tr>
+																	<td>
+																		<span>Show Assignment to students:</span>
+																	</td>
+																	<td>
+																	  <fieldset class="form-group">
+																		<div class="checkbox-toggle">
+																			<input type="checkbox" id="check-toggle-1"/>
+																			<label for="check-toggle-1"></label>
+																		</div>
+																	  </fieldset>		
+																	</td>	
+																</tr>
+																<tr>
+																	<td>
+																		<span>Allow Student Submissions:</span>
+																	</td>
+																	<td>
+																		<fieldset class="form-group">
+																				<div class="checkbox-toggle">
+																					<input type="checkbox" id="check-toggle-2"/>
+																					<label for="check-toggle-2"></label>
+																				</div>
+																		</fieldset>		
+																	</td>	
+																</tr>
+																<tr>
+																	<td>
+																		<label for="check-toggle-3">Show Feedback to Student:</label>
+																	</td>
+																	<td>
+																		<fieldset class="form-group">
+																			<div class="checkbox-toggle">
+																				<input type="checkbox" id="check-toggle-3"/>
+																				<label for="check-toggle-3"></label>
+																			</div>
+																		</fieldset>		
+																	</td>	
+																</tr>
+																<tr>
+																	<form id="formpop2" name="formpop2" method="POST">
+																		<td>
+																			<label class="form-lable">Repository Path:</lable>
+																		</td>
+																		<td>
+																			<fieldset class="form-group">
+																			<input name="RepositoryPath"
+																						   type="text"
+																						   class="form-control " id="RepositoryPath" readonly>
+																			</fieldset>
+																		</td>	
+																	</form>
+																</tr>
+																<tr>
+																	<td>
+																		<span>Run Assignment Test Dockfile:</span>
+																	</td>
+																	<td>
+																		<fieldset class="form-group">
+																			<div class="checkbox-toggle">
+																				<input type="checkbox" id="check-toggle-4"/>
+																				<label for="check-toggle-4"></label>
+																			</div>
+																		</fieldset>	
+																		<form id="formscrpit" name="formscrpit" style="display:none" method="POST">	
+																				<input type="file" id="testfile" name="dockerfile"  />
+																				</form>	
+																	</td>	
+																</tr>
+														</table>
+														</div>
+													</section>
+												</div>
+												<div class="col-xl-3">
+														<section class="box-typical box-typical-dashboard">
+															<header class="box-typical-header">
+																<div class="tbl-row">
+																	<div class="tbl-cell tbl-cell-title">
+																		<h4>Resubmission & Export </h4>
+																	</div>
+																	<div class="tbl-cell tbl-cell-actions">
+																		<button type="button" class="action-btn action-btn-expand">
+																			<i class="font-icon font-icon-expand"></i>
+																		</button>
+																	</div>
+																</div>
+															</header>
+															<div class="box-typical-body">
+																<table class="tbl-typical">
+																	<tr>
+																		<th><div>Details</div></th>
+																		<th><div>Status</div></th>
+																	</tr>
+																	<tr>
+																	<td>
+																		<span>Revisions to Return or Export:</span>
+																	</td>
+																			<td>
+																					<select class="select2" id="selectionpop2">
+																						   <option></option>
+																							<option value="All Revisions">All Revisions</option>
+																							<option value="Lastest Revisions Only">Lastest Revisions Only</option>
+																							
+																					</select>	
+																			</td>	
+																			
+																		</tr>
+																	<tr>
+																			<td>
+																				<span>Confirm Resubmission Request:</span>
+																			</td>
+																			<td>
+																			  <fieldset class="form-group">
+																				<div class="checkbox-toggle">
+																					<input type="checkbox" id="check-toggle-5" />
+																					<label for="check-toggle-5"></label>
+																				</div>
+																		    </fieldset>		
+																			</td>	
+																	</tr>
+																 </table>
+															</div><!--.box-typical-body-->
+														</section><!--.box-typical-dashboard-->
+													</div><!--.col-->
+													<div class="col-xl-3">
+															<section class="box-typical box-typical-dashboard">
+																<header class="box-typical-header">
+																	<div class="tbl-row">
+																		<div class="tbl-cell tbl-cell-title">
+																			<h3>Marking Details</h3>
+																		</div>
+																		<div class="tbl-cell tbl-cell-actions">
+																			<button type="button" class="action-btn action-btn-expand">
+																				<i class="font-icon font-icon-expand"></i>
+																			</button>
+																		</div>
+																	</div>
+																</header>
+																<div class="box-typical-body">
+																	<table class="tbl-typical">
+																		<tr>
+																			<th><div>Details</div></th>
+																			<th><div>Status</div></th>
+																		</tr>
+																		<tr>
+																			<form id="formpop3" name="formpop3" method="POST">
+																			<td>
+																				<label class="form-lable">Due Date:</lable>
+																			</td>
+																			<td>
+																				<fieldset class="form-group">
+																				<input class="flatpickr form-control form-control-blue-fill" data-enable-time="true" data-allow-input="true" data-enable-seconds="true" id="DueDate" name="DueDate" type="text"
+																										 >
+																				</fieldset>
+																				<fieldset class="form-group">
+																					<button type="button" class="btn btn-rounded btn-inline btn-primary" id="submitpop3">update</button>
+																				</fieldset>		
+																		  </td>	
+																			</form>
+																		</tr>
+																		<tr>
+																			<form id="formpop4" name="formpop4" method="POST">
+																				<td>
+																					<label class="form-lable">Course Weight%:</lable>
+																				</td>
+																				<td>
+																					<fieldset class="form-group">
+																						<input name="CourseWeight"
+																									type="text"
+																									class="form-control form-control-blue-fill" id="CourseWeight">
+																					</fieldset>
+																					<fieldset class="form-group">
+																						<button type="button" class="btn btn-rounded btn-inline btn-primary" id="submitpop4">update</button>
+																					</fieldset>		
+																				</td>	
+																			</form>
+																		</tr>
+																		<tr>
+																				<form id="formpop5" name="formpop5" method="POST">
+																						<td>
+																								<label class="form-lable">Maximum Mark:</lable>
+																						</td>
+																						<td>
+																							<fieldset class="form-group">
+																								<input name="MaximumMark"
+																										   type="text"
+																										   class="form-control form-control-blue-fill" id="MaximumMark">
+																							</fieldset>
+																							<fieldset class="form-group">
+																								<button type="button" class="btn btn-rounded btn-inline btn-primary" id="submitpop5">update</button>
+																							</fieldset>		
+																						</td>	
+																				</form>
+																		</tr>
+																		<tr>
+																				<form id="formpop6" name="formpop6" method="POST">
+																					<td>
+																						<label class="form-lable">Maximum Feedback Mark:</lable>
+																					</td>
+																					<td>
+																						<fieldset class="form-group">
+																							<input name="MaximumFeedbackMark"
+																										type="text"
+																										class="form-control form-control-blue-fill"  id="MaximumFeedbackMark">
+																						</fieldset>
+																						<fieldset class="form-group">
+																							<button type="button" class="btn btn-rounded btn-inline btn-primary" id="submitpop6">update</button>
+																						</fieldset>		
+																				  </td>	
+																				</form>
+																		</tr>
+																		<tr>
+																			<td>
+																				<span>Final Mark:</span>
+																			</td>
+																			<td>
+																				<select class="select2" id="selectionpop3">
+																					<option></option>
+																					<option value="Best Mark">Best Mark</option>
+																					<option value="Manual Mark">Manual Mark</option>
+																					<option value="Feedback Mark">Feedback Mark</option>
+																				</select>	
+																			</td>	
+																		</tr>
+																</table>
+															</div>
+															</section>
+														</div>
+														<div class="col-xl-3">
+																<section class="box-typical box-typical-dashboard">
+																	<header class="box-typical-header">
+																		<div class="tbl-row">
+																			<div class="tbl-cell tbl-cell-title">
+																				<h3>New Extension</h3>
+																			</div>
+																			<div class="tbl-cell tbl-cell-actions">
+																				<button type="button" class="action-btn action-btn-expand">
+																					<i class="font-icon font-icon-expand"></i>
+																				</button>
+																			</div>
+																		</div>
+																	</header>
+																	<div class="box-typical-body">
+																		<table class="tbl-typical">
+																			<tr>
+																				<th><div>Details</div></th>
+																				<th><div>Status</div></th>
+																			</tr>
+																			<form id="formpop7" name="formpop7" method="POST">
+																			<tr>
+																				<td>
+																					<label class="form-lable">Username:</lable>
+																				</td>
+																				<td>
+																					<fieldset class="form-group">
+																						<input name="Username"
+																									type="text"
+																									class="form-control form-control-blue-fill"
+																									id="Username">
+																								</fieldset>
+																							</td>	
+																			</tr>
+																			<tr>
+																				<td>
+																					<label class="form-lable">Due Date:</lable>
+																				</td>
+																				<td>
+																					<fieldset class="form-group">
+																					<input class="flatpickr form-control form-control-blue-fill" data-enable-time="true" data-allow-input="true" id="DueDate2" name="DueDate2" data-enable-seconds="true" type="text"
+																										 >
+																					</fieldset>
+																				</td>	
+																		  </tr>
+																			<tr>
+																				<td>
+																					<label class="form-lable">Maximum Mark:</lable>
+																				</td>
+																				<td>
+																					<fieldset class="form-group">
+																						<input name="MaximumMark"
+																									type="text"
+																									class="form-control form-control-blue-fill">
+																						</fieldset>
+																				</td>	
+																			</tr>
+																			<tr>
+																				<td>
+																					<fieldset class="form-group">
+																						<button type="button" class="btn btn-rounded btn-inline btn-primary" id="submitpop7">update</button>
+																					</fieldset>	
+																				</td>
+																			</tr>
+																	</form>
+														</table>
+													</div>
+											</section>
+									</div>
+								</div>		
+							</div>
+						</div>
+					</div>
+				</div>
+<!--floating window for course-->
+<div class="modal fade modal-upload-default" id="upload2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content" style="width:1200px;">
+				<div class="modal-header">
+					<button type="button" class="modal-close" data-dismiss="modal" aria-label="Close">
+						<i class="font-icon-close-2"></i>
+					</button>
+					<h4 class="modal-title" id="myModalLabel">Reconfiguration</h4>
+				</div>
+				<div class="modal-upload menu-big-icons" style="height:800px">
+					<div class="row">
+							<div class="col-xl-3" >
+									<section class=" box-typical box-typical-dashboard">
+										<header class="box-typical-header">
+											<div class="tbl-row">
+												<div class="tbl-cell tbl-cell-title">
+													<h3>Course Details</h3>
+												</div>
+												<div class="tbl-cell tbl-cell-actions">
+													<button type="button" class="action-btn action-btn-expand">
+														<i class="font-icon font-icon-expand"></i>
+													</button>
+												</div>
+											</div>
+										</header>
+										<div class="box-typical-body">
+											<table class="tbl-typical">
+												<tr>
+													<th><div>Details</div></th>
+													<th><div>Status</div></th>
+												</tr>
+												<tr>
+														<form id="formcoursedirectory" name="formcoursedirectory" method="POST">
+														<td>
+																<label class="form-lable">Course Directory:</lable>
+														</td>
+														<td>
+																<fieldset class="form-group">
+																<input name="coursedirectory"
+																type="text"
+																class="form-control " id="coursedirectory"readonly>
+																 </fieldset>
+														</td>
+														</form>
+												</tr>
+												<tr>
+													<form id="formcourse1" name="formcourse1" method="POST">
+														<td>
+															<label class="form-lable">Anchor Text:</lable>
+														</td>
+														<td>
+															<fieldset class="form-group">
+															<input name="courseAnchortext"
+																		 type="text"
+																		 class="form-control form-control-blue-fill" id="courseAnchortext">
+															</fieldset>
+															<fieldset class="form-group">
+															<button type="button" class="btn btn-rounded btn-inline btn-primary" id="anchorText">update</button>
+															</fieldset>		
+														</td>	
+													</form>
+												</tr>
+												<tr>
+													<td>
+														<span>Show Course to students:</span>
+													</td>
+													<td>
+														<fieldset class="form-group">
+															<div class="checkbox-toggle">
+															<input type="checkbox" id="showCourseToStudent" name="showCourseToStudent"/>
+															<label for="showCourseToStudent"></label>
+															</div>
+														</fieldset>		
+													</td>	
+												</tr>
+												<tr>
+													<td>
+														<span>Use Pracmarker:</span>
+													</td>
+													<td>
+														<fieldset class="form-group">
+																<div class="checkbox-toggle">
+																	<input type="checkbox" id="usePramarker"/>
+																	<label for="usePramarker"></label>
+																</div>
+														</fieldset>		
+													</td>	
+												</tr>
+											</table>
+										</div>
+									</section>
+								</div>
+								<div class="col-xl-4">
+										<section class="box-typical" style="height:752.5px;">
+												<div id="toolbarmarker" class="myfont">Current Markers</br>
+													<button type="button" class="btn btn-rounded btn-inline btn-primary" id="addmarker">add</button>
+												</div>
+										<div class="table" >
+											<table id="tablemarker"
+												data-toolbar="#toolbarmarker"
+												data-pagination="true"
+												data-search="true"
+												data-use-row-attr-func="true"
+												data-reorderable-rows="true"
+												data-url="marker.json"
+												data-click-to-select="true"
+												data-single-select="true">
+											<thead>
+												<tr>
+													<th data-field="CurrentMarkers" data-sortable="true">Current Markers
+													</th>		
+												</tr>
+											</thead>
+											</table>
+										</div>
+										</section>	
+								</div>
+								<div class="col-xl-4">
+										<section class="box-typical" style="height:752.5px;">
+												<div id="toolbarguest" class="myfont">Current Guests</br>
+													<button type="button" class="btn btn-rounded btn-inline btn-primary" id="addguests">add</button>
+												</div>
+										<div class="table">
+											<table id="tableguests"
+												data-toolbar="#toolbarguest"
+												data-pagination="true"
+												data-search="true"
+												data-use-row-attr-func="true"
+												data-reorderable-rows="true"
+												data-url="guest.json"
+												data-click-to-select="true"
+												data-single-select="true">
+											<thead>
+												<tr>
+													<th data-field="CurrentMarkers" data-sortable="true">Current Guests
+													</th>		
+												</tr>
+												</thead>
+											</table>
+										</div>
+										</section>	
+								</div>	
+					</div> 
+				</div>
+			</div>			
+		</div>							
+	</div>
+
+<!--floating window:add a new marker-->
+			<div class="modal fade modal-upload-default" id="uploadmarker" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content" style="width:300px;">
+							<div class="modal-header">
+								<button type="button" class="modal-close" data-dismiss="modal" aria-label="Close">
+									<i class="font-icon-close-2"></i>
+								</button>
+								<h4 class="modal-title" id="myModalLabel">Add a new marker</h4>
+							</div>
+							<div class="modal-upload menu-big-icons">
+								<section class="box-typical box-typical-dashboard">
+										<header class="box-typical-header">
+											<div class="tbl-row">
+												<div class="tbl-cell tbl-cell-title">
+													<h3>New marker</h3>
+												</div>
+												<div class="tbl-cell tbl-cell-actions">
+													<button type="button" class="action-btn action-btn-expand">
+														<i class="font-icon font-icon-expand"></i>
+													</button>
+												</div>
+											</div>
+										</header>
+										<div class="box-typical-body">
+											<table class="tbl-typical">
+												<tr>
+													<th><div>Details</div></th>
+													<th><div>Status</div></th>
+												</tr>
+												<form id="markerform" name="markerform" method="POST">
+												<tr>
+													<td>
+														<label class="form-lable">ID:</lable>
+													</td>
+													<td>
+														<fieldset class="form-group">
+															<input name="CurrentMarkers"
+																		type="text"
+																		class="form-control form-control-blue-fill">
+														</fieldse>
+													</td>	
+												</tr>
+												<tr>
+													 <td>
+														<fieldset class="form-group">
+															<button type="button" class="btn btn-rounded btn-inline btn-primary" id="submitmarker">submit</button>
+														</fieldset>	
+													</td>
+												 </tr>
+											</form>
+											</table>
+										</div>
+									</section>
+								</div>
+						</div>
+					</div>
+				</div>
+				<!--floating window: add a new guest-->
+				<div class="modal fade modal-upload-default" id="uploadguest" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content" style="width:300px;">
+								<div class="modal-header">
+									<button type="button" class="modal-close" data-dismiss="modal" aria-label="Close">
+										<i class="font-icon-close-2"></i>
+									</button>
+									<h4 class="modal-title" id="myModalLabel">Add a new guest</h4>
+								</div>
+								<div class="modal-upload menu-big-icons">
+									<section class="box-typical box-typical-dashboard">
+											<header class="box-typical-header">
+												<div class="tbl-row">
+													<div class="tbl-cell tbl-cell-title">
+														<h3>New guest</h3>
+													</div>
+													<div class="tbl-cell tbl-cell-actions">
+														<button type="button" class="action-btn action-btn-expand">
+															<i class="font-icon font-icon-expand"></i>
+														</button>
+													</div>
+												</div>
+											</header>
+											<div class="box-typical-body">
+												<table class="tbl-typical">
+													<tr>
+														<th><div>Details</div></th>
+														<th><div>Status</div></th>
+													</tr>
+													<form id="guestform" name="guestform" method="POST">
+													<tr>
+														<td>
+																<label class="form-lable">ID:</lable>
+														</td>
+														<td>
+															<fieldset class="form-group">
+																<input name="CurrentGuests"
+																			type="text"
+																			class="form-control form-control-blue-fill">
+																</fieldse>
+														</td>	
+													</tr>
+													 <tr>
+														 <td>
+															<fieldset class="form-group">
+																<button type="button" class="btn btn-rounded btn-inline btn-primary" id="submitguest">submit</button>
+															</fieldset>	
+														</td>
+													 </tr>
+												</form>
+												</table>
+											</div>
+										</section>
+									</div>
+							</div>
+						</div>
+					</div>	
+
+			
+
+	<script src="js/lib/jquery/jquery-3.2.1.min.js"></script>
+	<script src="js/lib/popper/popper.min.js"></script>
+	<script src="js/lib/tether/tether.min.js"></script>
+	<script src="js/lib/bootstrap/bootstrap.min.js"></script>
+	<script src="js/plugins.js"></script>
+	  <script src="jquery.mockjax.js"></script>
+	<script src="js/lib/bootstrap-table/bootstrap-table.js"></script>
+	<script src="js/lib/bootstrap-table/bootstrap-table-reorder-rows.min.js"></script>
+	<script src="js/lib/bootstrap-table/jquery.tablednd.js"></script>
+
+	<script type="text/javascript" src="js/lib/jqueryui/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/lib/lobipanel/lobipanel.min.js"></script>
+	<script type="text/javascript" src="js/lib/match-height/jquery.matchHeight.min.js"></script>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+	<script src="js/lib/bootstrap-select/bootstrap-select.min.js"></script>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	
+	<script type="text/javascript" src="js/lib/moment/moment-with-locales.min.js"></script>
+	<script type="text/javascript" src="js/lib/flatpickr/flatpickr.min.js"></script>
+	<script src="js/lib/clockpicker/bootstrap-clockpicker.min.js"></script>
+	<script src="js/lib/clockpicker/bootstrap-clockpicker-init.js"></script>
+	<script src="js/lib/daterangepicker/daterangepicker.js"></script>
+	<script src="js/lib/bootstrap-select/bootstrap-select.min.js"></script>
+	<script src="js/lib/prism/prism.js"></script>
+
+	 
+	<script src="kartik-v-bootstrap-fileinput/js/fileinput.min.js"></script>
+	
+	<script src="bootstrap-fileinput-master/js/fileinput.min.js"></script>
+	<script src="bootstrap-fileinput-master/js/plugins/piexif.min.js"></script>
+	<script src="bootstrap-fileinput-master/js/plugins/purify.min.js"></script>
+	<script src="bootstrap-fileinput-master/js/plugins/sortable.min.js"></script>
+
+	<script src="js/lib/bootstrap-table/bootstrap-table-export.min.js"></script>
+	<script src="js/lib/bootstrap-table/tableExport.min.js"></script>
+	<script src="tableExport.jquery.plugin-master/libs/FileSaver/FileSaver.min.js"></script>
+	<script src="tableExport.jquery.plugin-master/libs/jsPDF/jspdf.min.js"></script>
+	<script src="tableExport.jquery.plugin-master/libs/jsPDF-AutoTable/jspdf.plugin.autotable.js"></script>
+<script src="js/app.js"></script>
+<script>
+
+</script>
+
+<script>  
+//navigation page
+$(function(){
+//year   default 2019
+		$("#selection1").ready(function(){
+			var data1=$("#selection1").val();
+				$.ajax({
+					type:'POST',
+					url:'/navigation/year',
+					dataType:'json',
+					data:	{"year":data1},
+ 					success:function(data){
+							console.log("post88");
+							console.log(data);
+						},
+				});
+				$tableCourse.bootstrapTable('refresh');
+			});
+});
+$(function(){
+//change year
+$("#selection1").change(function(){
+	var data1=$("#selection1").val();
+		$.ajax({
+			type:'POST',
+			url:'/navigation/year',
+			dataType:'json',
+			data:	{"year":data1},
+			 success:function(data){
+					console.log("post88");
+					console.log(data);
+				},
+		});
+
+	 //change year semester
+		$table.bootstrapTable('refresh');
+		$tableCourse.bootstrapTable('refresh');
+		$table2.bootstrapTable('refresh');
+		//hide assignment,classist, submission tabs	
+		document.getElementById("assignmentTab").style.display="none";
+		document.getElementById("classistTab").style.display="none";
+		document.getElementById("submissionTab").style.display="none";	
+	});
+});
+$(function(){
+//teaching period default
+$("#selection2").ready(function(){
+	console.log("yessemester");
+  var data1=$("#selection2").val();
+	$.ajax({
+			type:'POST',
+			url:'/navigation/teachingPeriod',
+			dataType:'json',
+			data:	{"teachingPeriod":data1},
+			 success:function(data){
+					console.log("post88");
+					console.log(data);
+				},
+		});
+	});
+});
+//teaching period
+$(function(){
+		$("#selection2").change(function(){
+			var data1=$("#selection2").val();
+			$.ajax({
+					type:'POST',
+					url:'/navigation/teachingPeriod',
+					dataType:'json',
+					data:	{"teachingPeriod":data1},
+ 					success:function(data){
+							console.log("post88");
+							console.log(data);
+						},
+				});
+				//fresh tables
+				$table.bootstrapTable('refresh');
+				$table2.bootstrapTable('refresh');
+				$tableCourse.bootstrapTable('refresh');
+				//hide assignment,classist, submission tabs	
+				document.getElementById("assignmentTab").style.display="none";
+				document.getElementById("classistTab").style.display="none";
+				document.getElementById("submissionTab").style.display="none";	
+			});
+	});
+
+// load course
+	var $table=$('#table').bootstrapTable({
+			//load course
+			ajax:function(request){
+				$.ajax({
+					type:"get",
+					url:'/navigation/getCourse',
+					dataType:"json",
+					data:'',
+				  success:function(msg){
+						console.log("agin");
+						console.log(msg);
+						request.success({
+							row:msg
+						});
+					$('#table').bootstrapTable('load',msg);
+					},
+			});
+			},
+			columns:[{
+				field:"AnchorText2",
+				title:"Course",
+			},{
+					field:"",
+					title:"",
+					checkbox:true,
+
+				},
+		],
+		onCheck:function(row){
+			  console.log("eee");
+				console.log(row);
+					$.ajax({
+						type:"post",
+						url:'/navigation/course',
+						dataType:"json",
+						data:row,
+					});
+					//refresh   page
+					$table2.bootstrapTable('refresh');
+					//refresh assignment page 
+					$table4.bootstrapTable('refresh');
+					document.getElementById("assignmentTab").style.display="";
+					document.getElementById("classistTab").style.display="none";
+					document.getElementById("submissionTab").style.display="none";	
+					
+				},
+			onUncheck:function(row){
+				$.ajax({
+						type:"post",
+						url:'/navigation/course',
+						dataType:"json",
+						data:row,
+					});
+					//refresh tables
+				$table2.bootstrapTable('refresh');
+				$table4.bootstrapTable('refresh');
+				document.getElementById("assignmentTab").style.display="none";
+				document.getElementById("classistTab").style.display="none";
+				document.getElementById("submissionTab").style.display="none";	
+			    
+			},
+	
+		
+	});
+//assignment
+var $table2=$('#table2').bootstrapTable({
+	//pick and post data to the back-end
+	onCheck:function(row){
+		console.log(row);
+					$.ajax({
+						type:"post",
+						url:'/navigation/assignment',
+						dataType:"json",
+						data:row,
+					});
+					//When pick a assignment   refresh classist
+					$tablenumber.bootstrapTable('refresh');
+					$tablesubmission.bootstrapTable('refresh');
+					$tablefeedback.bootstrapTable('refresh');
+					//submission classist tabs show
+					document.getElementById("submissionTab").style.display="";
+					document.getElementById("classistTab").style.display="";
+				     
+				},//when uncheck,
+			onUncheck:function(row){
+			document.getElementById("submissionTab").style.display="none";
+				document.getElementById("classistTab").style.display="none";
+			},
+			ajax:function(request){
+				$.ajax({
+					type:"get",
+					url:'/navigation/getAssignment',
+					dataType:"json",
+					data:'',
+				  success:function(msg){
+						request.success({
+							row:msg
+						});
+						console.log(msg);
+						$('#table2').bootstrapTable('load',msg);
+					},
+					
+				});
+			},
+			columns:[{
+				field:"AnchorText",
+				title:"Assignment",
+					},{
+					field:"",
+					title:"",
+					checkbox:true,
+				},
+		],
+		formatLoadingMessage:function(){
+			return "Please select a course";
+		}
+	});	
+</script>
+<script>
+		//manage course page
+	(function ($) {
+    $.fn.serializeFormJSON = function () {
+ 				var o = {};
+        var a = this.serializeArray();
+        $.each(a, function () {
+            if (o[this.name]) {
+                if (!o[this.name].push) {
+                    o[this.name] = [o[this.name]];
+                }
+                o[this.name].push(this.value || '');
+            } else {
+                o[this.name] = this.value || '';
+            }
+        });
+        return o;
+    };
+})(jQuery);
+//course table
+window.operateEventsCourse = {
+          'click .RoleOfedit': function (e, value, row, index) {
+						//alert(row.qxxh);
+					$.ajax({
+					type:"post",
+					url:'/manageCourse/chooseCourse',
+					dataType:"json",
+					data:row,
+				});
+				$("#upload2").modal('show');
+				toUpdate2();
+				$tablemarker.bootstrapTable('refresh');
+				$tableguests.bootstrapTable('refresh');
+			  	}
+        };
+
+var $tableCourse=$('#tableCourse').bootstrapTable({
+				ajax:function(request){
+				  $.ajax({
+						type:"get",
+						url:'/manageCourse/getCourseList',
+						dataType:"json",
+						data:'',
+						success:function(msg){
+							request.success({
+								row:msg
+							});
+							console.log(msg);
+							$('#tableCourse').bootstrapTable('load',msg);
+						},
+					});
+				},
+				columns:[{
+					field:"CourseDirectory",
+					title:"Course Directory",
+				},{
+					field:"AnchorText2",
+					title:"Anchor Text",
+				},{
+					field:"Details",
+					title:"Details",
+					width:'100px',
+					height:'100px',
+					events:operateEventsCourse,
+					formatter:operateFormatterCourse
+
+				}
+			],
+		});
+		function operateFormatterCourse(value, row, index) {
+		return [
+
+		'<input type="button" value="Details" class="RoleOfedit btn btn-primary  btn-sm"  data-toggle="modal"  style="display:inline"  data-target="upload2" onclick="toUpdate2()">',
+		 ].join('');
+ }
+
+
+ $(function(){
+					$("#submitCourse").click(function(){
+						console.info($('#formCourse').serializeArray());
+						$.ajax({
+							type:'POST',
+							url:'/manageCourse/createCourse',
+						  dataType:'json',
+						  data:	$('#formCourse').serializeFormJSON(),
+ 							success:function(data){
+								console.log("post88");
+								console.log(data);
+								$tableCourse.bootstrapTable('refresh');
+					     	$table.bootstrapTable('refresh');
+						   document.getElementById("formCourse").reset();
+
+							},
+						
+						});	
+					});
+				});	
+
+//course details 
+ function toUpdate2(){
+		$.ajax({
+	   	type: "get",
+				dataType: "json",
+				url: "/manageCourse/getCourseDetail",
+				success: function(data) {
+					console.log(data);
+					$("#coursedirectory").val(data.coursedirectory);
+				
+					$("#courseAnchortext").val(data.courseAnchortext);
+					if(data.showCourseToStudent == "Y")
+					{
+						$("#showCourseToStudent").prop('checked', true);
+					}
+					else(
+						$("#showCourseToStudent").prop('checked', false)
+					)
+					if(data.usePramarker == "Y")
+					{
+						$("#usePramarker").prop('checked', true);
+					}
+					else(
+						$("#usePramarker").prop('checked', false)
+					)
+
+				}
+				
+	 });
+
+ }
+//course details    
+	$(function(){
+					$("#anchorText").click(function(){
+
+						$.ajax({
+							type:'POST',
+							url:'/manageCourse/courseAnchortext',
+						  dataType:'json',
+						  data:	$('#courseAnchortext').serializeFormJSON(),
+ 							success:function(data){
+								console.log("post88");
+								console.log(data);
+							},
+						
+						});
+						
+					});
+	});
+	$("#showCourseToStudent").click(function(){
+					if($(this).prop("checked")==true)
+					{
+						$.ajax({
+							type:'POST',
+							url:'/manageCourse/showCourseToStudent',
+						  dataType:'json',
+						  data:	{"showCourseToStudent":"Y"},
+ 							success:function(data){
+								console.log("post77");
+								console.log(data);
+							},
+						
+						});
+					
+				}
+					else{
+					
+					
+					 	$.ajax({
+							type:'POST',
+							url:'/manageCourse/showCourseToStudent',
+						  dataType:'json',
+						  data:	{"showCourseToStudent":"N"},
+ 							success:function(data){
+								console.log("post88");
+								console.log(data);
+							},
+					
+						});
+					}
+				
+			});
+			$("#usePramarker").click(function(){
+					if($(this).prop("checked")==true)
+					{
+						$.ajax({
+							type:'POST',
+							url:'/manageCourse/usePramarker',
+						  dataType:'json',
+						  data:	{"usePramarker":"Y"},
+ 							success:function(data){
+								console.log("post77");
+								console.log(data);
+							},
+						});
+					
+				}
+					else{
+					 	$.ajax({
+							type:'POST',
+							url:'/manageCourse/usePramarker',
+						  dataType:'json',
+						  data:	{"usePramarker":"N"},
+ 							success:function(data){
+								console.log("post88");
+								console.log(data);
+							},
+						
+						});
+					}
+				
+			});
+
+  
+	//marker
+		window.operatMarkers = {
+		//delete marker
+		'click .remove': function (e, value, row, index) {
+			
+			console.log(row);
+			console.log("ok");
+		
+			$.ajax({
+					type:"post",
+					url:'/manageCourse/deleteMarker',
+					dataType:"json",
+					data:row,
+				});
+				//refresh
+				$tablemarker.bootstrapTable('refresh');
+			
+		}
+	};
+	//table marker
+var $tablemarker=$('#tablemarker').bootstrapTable({
+	//read marker  
+
+			ajax:function(request){
+			
+				$.ajax({
+					type:"get",
+					url:'/manageCourse/getMarker',
+					dataType:"json",
+					data:'',
+				
+					success:function(msg){
+						request.success({
+							
+							row:msg
+						});
+						console.log(msg);
+						$('#tablemarker').bootstrapTable('load',msg);
+					},
+					
+				});
+			},
+			columns:[{
+				field:"CurrentMarkers",
+				title:"Current Markers",
+			
+					},{
+						filed:"",
+						title:"",
+						events:operatMarkers,
+						formatter:function(value,row,index){
+							return [
+					'<a class="remove" href="javascript:void(0)" title="Remove">',
+			'<i class="glyphicon glyphicon-remove"></i>',
+			'</a>'
+		].join('');
+
+						}
+
+					}
+				
+			
+		],
+	
+		
+	});	
+//add marker
+	$(function () {
+			$("#addmarker").click(function(){
+				$("#uploadmarker").modal('show');
+			
+          
+			});
+		});
+
+	$(function(){
+					$("#submitmarker").click(function(){
+							$.ajax({
+							type:'POST',
+							url:'/manageCourse/addMarker',
+						  dataType:'json',
+						  data:	$('#markerform').serializeFormJSON(),
+ 							success:function(data){
+								console.log("post88");
+								console.log(data);
+							},
+						
+						});
+						//refresh
+						$tablemarker.bootstrapTable('refresh');
+						document.getElementById("markerform").reset();
+						
+						
+					});
+				});
+
+</script>
+<script>
+	//guests
+		window.operatGuests = {
+		//delete guests
+		'click .remove': function (e, value, row, index) {
+			console.log(index);
+			$.ajax({
+					type:"post",
+					url:'/manageCourse/deleteGuest',
+					dataType:"json",
+					data:row,
+				});
+				//read agin
+				$tableguests.bootstrapTable('refresh');
+			
+		}
+	};
+	//table guest
+var $tableguests=$('#tableguests').bootstrapTable({
+	//read cruent guest
+
+			ajax:function(request){
+			
+				$.ajax({
+					type:"get",
+					url:'/manageCourse/getGuest',
+					dataType:"json",
+					data:'',
+				
+					success:function(msg){
+						request.success({
+							row:msg
+						});
+						$('#tableguests').bootstrapTable('load',msg);
+					},
+					
+				});
+			},
+			columns:[{
+				field:"CurrentGuests",
+				title:"Current Guests",
+			
+					},{
+						filed:"",
+						title:"",
+						events:operatGuests,
+						formatter:function(value,row,index){
+							return [
+					'<a class="remove" href="javascript:void(0)" title="Remove">',
+			'<i class="glyphicon glyphicon-remove"></i>',
+			'</a>'
+		].join('');
+
+						}
+
+					}
+				
+			
+		],
+	
+		
+	});	
+//add guest
+	$(function () {
+			$("#addguests").click(function(){
+				$("#uploadguest").modal('show');
+			
+          
+			});
+		});
+
+	$(function(){
+					$("#submitguest").click(function(){
+							$.ajax({
+							type:'POST',
+							url:'/manageCourse/addGuest',
+						  dataType:'json',
+						  data:	$('#guestform').serializeFormJSON(),
+ 							success:function(data){
+								console.log("post88");
+								console.log(data);
+							},
+						});
+						//refresh page
+						$tableguests.bootstrapTable('refresh');
+						document.getElementById("guestform").reset();
+						
+						
+					});
+				});
+
+</script>
+
+<script type="text/javascript">
+//Assingment
+(function ($) {
+    $.fn.serializeFormJSON = function () {
+ 
+        var o = {};
+        var a = this.serializeArray();
+        $.each(a, function () {
+            if (o[this.name]) {
+                if (!o[this.name].push) {
+                    o[this.name] = [o[this.name]];
+                }
+                o[this.name].push(this.value || '');
+            } else {
+                o[this.name] = this.value || '';
+            }
+        });
+        return o;
+    };
+})(jQuery);
+//pop    assignment details
+window.operateEvents = {
+          'click .RoleOfedit': function (e, value, row, index) {
+                //alert(row.qxxh);
+						$.ajax({
+					type:"post",
+					url:'/manageAssignment/chooseAssignment',
+					dataType:"json",
+					data:row,
+				});
+				//value
+				$("#upload").modal('show');
+				toUpdate();
+				$tablemarker.bootstrapTable('refresh');
+				$tableguests.bootstrapTable('refresh');
+			    
+            }
+        };
+//current assignment 
+	var $table4=$('#table4').bootstrapTable({
+				ajax:function(request){
+					$.ajax({
+						type:"get",
+						url:'/manageAssignment/getAssignmentList',
+						dataType:"json",
+						data:'',
+					
+						success:function(msg){
+							request.success({
+								row:msg
+							});
+							console.log(msg);
+							$('#table4').bootstrapTable('load',msg);
+						},
+					});
+				},
+				columns:[{
+					field:"AnchorText",
+					title:"Assignment Key",
+				},{
+					field:"RepositoryPath1",
+					title:"Repository Path:",
+				},{
+					field:"AnchorText",
+					title:"Anchor Text",
+				},{
+					field:"Details",
+					title:"Details",
+					width:'100px',
+					height:'100px',
+					events:operateEvents,
+					formatter:operateFormatter
+
+				}
+			],
+		
+			
+		});
+	//click and then pop  the float windows
+		function operateFormatter(value, row, index) {
+       return [
+
+       '<input type="button" value="Details" class="RoleOfedit btn btn-primary  btn-sm"  data-toggle="modal"  style="display:inline" data-target="upload" onclick="toUpdate()">',
+        ].join('');
+    }
+		//creat a new assignment
+		$(function(){
+					$("#submit1").click(function(){
+						console.info($('#form1').serializeArray());
+						$.ajax({
+							type:'POST',
+							url:'/manageAssignment/createAssignment',
+						  dataType:'json',
+						  data:	$('#form1').serializeFormJSON(),
+ 							success:function(data){
+								console.log("post88");
+								console.log(data);
+								$table4.bootstrapTable('refresh');
+						$table2.bootstrapTable('refresh');
+						document.getElementById("form1").reset()
+
+							},
+				    
+						});	
+					});
+				});	
+
+
+</script>
+<script type="text/javascript">
+	//assignment details 
+	(function ($) {
+    $.fn.serializeFormJSON = function () {
+ 
+        var o = {};
+        var a = this.serializeArray();
+        $.each(a, function () {
+            if (o[this.name]) {
+                if (!o[this.name].push) {
+                    o[this.name] = [o[this.name]];
+                }
+                o[this.name].push(this.value || '');
+            } else {
+                o[this.name] = this.value || '';
+            }
+        });
+        return o;
+    };
+})(jQuery);
+ $(function(){
+					$("#submitpop1").click(function(){
+
+						$.ajax({
+							type:'POST',
+							url:'/manageAssignment/AnchorText',
+						  dataType:'json',
+						  data:	$('#formpop1').serializeFormJSON(),
+ 							success:function(data){
+								console.log("post88");
+								console.log(data);
+							},
+						});
+						
+					});
+				});
+				$("#check-toggle-1").click(function(){
+					if($(this).prop("checked")==true)
+					{
+						$.ajax({
+							type:'POST',
+							url:'/manageAssignment/ShowAssignment',
+						  dataType:'json',
+						  data:	{"ShowAssignment":"Y"},
+ 							success:function(data){
+								console.log("post77");
+								console.log(data);
+							},
+						});
+					
+				}
+					else{
+					$.ajax({
+							type:'POST',
+							url:'/manageAssignment/ShowAssignment',
+						  dataType:'json',
+						  data:	{"ShowAssignment":"N"},
+ 							success:function(data){
+								console.log("post88");
+								console.log(data);
+							},
+						});
+					}
+				
+			});
+			$("#check-toggle-2").click(function(){
+					if($(this).prop("checked")==true)
+					{
+				
+						$.ajax({
+							type:'POST',
+							url:'/manageAssignment/AllowStudentSubmissions',
+						  dataType:'json',
+						  data:	{"AllowStudentSubmissions":"Y"},
+ 							success:function(data){
+								console.log("post77");
+								console.log(data);
+							},
+					
+						});
+					
+				}
+					else{
+
+					 	$.ajax({
+							type:'POST',
+							url:'/manageAssignment/AllowStudentSubmissions',
+						  dataType:'json',
+						  data:	{"AllowStudentSubmissions":"N"},
+ 							success:function(data){
+								console.log("post88");
+								console.log(data);
+							},
+						
+						});
+					}
+				
+			});
+			$("#check-toggle-3").click(function(){
+					if($(this).prop("checked")==true)
+					{
+				
+						$.ajax({
+							type:'POST',
+							url:'/manageAssignment/ShowFeedbacktoStudent',
+						  dataType:'json',
+						  data:	{"ShowFeedbacktoStudent":"Y"},
+ 							success:function(data){
+								console.log("post77");
+								console.log(data);
+							},
+						});
+					
+				}
+					else{
+					
+					
+					 	$.ajax({
+							type:'POST',
+							url:'/manageAssignment/ShowFeedbacktoStudent',
+						  dataType:'json',
+						  data:	{"ShowFeedbacktoStudent":"N"},
+ 							success:function(data){
+								console.log("post88");
+								console.log(data);
+							},
+						});
+					}
+				
+			});
+		
+				$("#check-toggle-4").click(function(){
+					if($(this).prop("checked")==true)
+					{
+						document.getElementById("formscrpit").style.display="inline";
+
+						$.ajax({
+							type:'POST',
+							url:'/manageAssignment/RunAssignmentTestScript',
+						  dataType:'json',
+						  data:	{"RunAssignmentTestScript":"Y"},
+ 							success:function(data){
+								console.log("post77");
+								console.log(data);
+							},
+						});
+					
+				}
+					else{
+						document.getElementById("formscrpit").style.display="none";
+						
+					 	$.ajax({
+							type:'POST',
+							url:'/manageAssignment/RunAssignmentTestScript',
+						  dataType:'json',
+						  data:	{"RunAssignmentTestScript":"N"},
+ 							success:function(data){
+								console.log("post88");
+								console.log(data);
+							},
+						});
+					}
+				
+			});
+$(function(){
+					$("#selectionpop2").change(function(){
+						
+						var data1=$("#selectionpop2").val();
+						
+						$.ajax({
+							
+							type:'POST',
+							url:'/manageAssignment/RevisionstoReturnorExport',
+						  dataType:'json',
+						  data:	{"RevisionstoReturnorExport":data1},
+ 							success:function(data){
+								 
+								
+								console.log("post88");
+								console.log(data);
+							},
+						});
+						
+					});
+				});
+				$("#check-toggle-5").click(function(){
+					if($(this).prop("checked")==true)
+					{
+					
+						$.ajax({
+							type:'POST',
+							url:'/manageAssignment/ConfirmResubmissionRequest',
+						  dataType:'json',
+						  data:	{"ConfirmResubmissionRequest":"Y"},
+ 							success:function(data){
+								console.log("post77");
+								console.log(data);
+							},
+						});
+					
+				}
+					else{
+
+					
+					 	$.ajax({
+							type:'POST',
+							url:'/manageAssignment/ConfirmResubmissionRequest',
+						  dataType:'json',
+						  data:	{"ConfirmResubmissionRequest":"N"},
+ 							success:function(data){
+								console.log("post88");
+								console.log(data);
+							},
+						});
+					}
+				
+			});
+			$(function(){
+					$("#submitpop3").click(function(){
+
+						$.ajax({
+							type:'POST',
+							url:'/manageAssignment/DueDate',
+						  dataType:'json',
+						  data:	$('#formpop3').serializeFormJSON(),
+ 							success:function(data){
+								console.log("post88");
+								console.log(data);
+							},
+						});
+						
+					});
+				});	
+				$(function(){
+					$("#submitpop4").click(function(){
+
+						console.info($('#formpop4').serializeArray());
+						$.ajax({
+							type:'POST',
+							url:'/manageAssignment/CourseWeight',
+						  dataType:'json',
+						  data:	$('#formpop4').serializeFormJSON(),
+ 							success:function(data){
+								console.log("post88");
+								console.log(data);
+							},
+						
+
+						});
+						
+					});
+				});	
+				
+				$(function(){
+					$("#submitpop5").click(function(){
+
+						console.info($('#formpop5').serializeArray());
+						$.ajax({
+							type:'POST',
+							url:'/manageAssignment/MaximumMark',
+						  dataType:'json',
+						  data:	$('#formpop5').serializeFormJSON(),
+ 							success:function(data){
+								console.log("post88");
+								console.log(data);
+							},
+							
+						});
+						
+					});
+				});	
+				$(function(){
+					$("#submitpop6").click(function(){
+
+						console.info($('#formpop6').serializeArray());
+						$.ajax({
+							type:'POST',
+							url:'/manageAssignment/MaximumFeedbackMark',
+						  dataType:'json',
+						  data:	$('#formpop6').serializeFormJSON(),
+ 							success:function(data){
+								console.log("post88");
+								console.log(data);
+							},
+						
+
+						});
+						
+					});
+				});	
+				$(function(){
+					$("#selectionpop3").change(function(){
+						
+						var data1=$("#selectionpop3").val();
+
+						$.ajax({
+							
+							type:'POST',
+							url:'/manageAssignment/FinalMark',
+						  dataType:'json',
+						  data:	{"FinalMark":data1},
+ 							success:function(data){
+								 
+								
+								console.log("post88");
+								console.log(data);
+							},
+						
+
+						});
+						
+					});
+				});
+
+				$(function(){
+					$("#submitpop7").click(function(){
+
+						
+						console.info($('#formpop7').serializeArray());
+						$.ajax({
+							type:'POST',
+							url:'/manageAssignment/NewExtension',
+						  dataType:'json',
+						  data:	$('#formpop7').serializeFormJSON(),
+ 							success:function(data){
+								console.log("post88");
+								console.log(data);
+							},
+							
+
+						});
+						
+					});
+				});	
+
+	
+	 $('.flatpickr').flatpickr();	
+  //upload dockfile
+	 $('#testfile').fileinput({
+  
+	uploadUrl: '/manageAssignment/uploadDockerfile',
+	showCaption: true,
+	showUpload: true,
+	showRemove: true,
+	showClose: true,
+	showPreview:false,
+	layoutTemplates:{
+			actionDelete: ''
+	},
+	browseClass: 'btn btn-primary'
+}).on("fileuploaded", function (event, data, previewId, index){
+		   
+ });
+
+	
+	</script>
+	<script type="text/javascript">
+	//assginment page fload windows 
+		
+		function toUpdate() {
+		
+			$.ajax({
+				type: "get",
+				dataType: "json",
+				url: "/manageAssignment/getAssignmentDetail",
+				data: '',
+				success: function(data) {
+					console.log("getDetail");
+					
+					$("#Anchortext").val(data.AnchorText);
+					if(data.ShowAssignment== "Y")
+					{
+						$("#check-toggle-1").prop('checked', true);
+					}
+					else(
+						$("#check-toggle-1").prop('checked', false)
+					)
+					if(data.AllowStudentSubmissions == "Y")
+					{
+						$("#check-toggle-2").prop('checked', true);
+					}
+					else(
+						$("#check-toggle-2").prop('checked', false)
+					)
+					if(data.ShowFeedbacktoStudent == "Y")
+					{
+						$("#check-toggle-3").prop('checked', true);
+					}
+					else(
+						$("#check-toggle-3").prop('checked', false)
+					)
+					$("#RepositoryPath").val(data.RepositoryPath);
+					if(data.RunAssignmentTestScript == "Y")
+					{
+						$("#check-toggle-4").prop('checked', true);
+						
+					}
+					else(
+						$("#check-toggle-4").prop('checked', false)
+					
+					)
+
+					$("#selectionpop1").prop("value",data.ReturnorExportPreviousSubmission);
+ 					$("#selectionpop1").trigger('change');
+					 $("#selectionpop2").prop("value",data.RevisionstoReturnorExport);
+ 					$("#selectionpop2").trigger('change');
+				
+  
+					if(data.ConfirmResubmissionRequest == "Y")
+					{
+						$("#check-toggle-5").prop('checked', true);
+					}
+					else(
+						$("#check-toggle-5").prop('checked', false)
+					)
+					$("#DueDate").val(data.DueDate);
+					$("#CourseWeight").val(data.CourseWeight);
+					$("#MaximumMark").val(data.MaximumMark);
+					$("#MaximumFeedbackMark").val(data.MaximumFeedbackMark);
+					
+
+					$("#selectionpop3").prop("value",data.FinalMark);
+ 					$("#selectionpop3").trigger('change');
+					 $("#selectionpop4").prop("value",data.FeedbackMark);
+ 					$("#selectionpop4").trigger('change');
+					
+					
+
+				},
+			
+			});
+		}
+</script>
+
+<script type="text/javascript">
+//tab 4 classist
+//download all code
+var accountall=0;
+$("#downloadallcode").click(function(){
+
+if(accountall==0){
+	accountall++;
+$.ajax({
+		type:'POST',
+		url:'/classList/downloadAllCode',
+		dataType:'json',
+		data:	{"downloadallcode":"Y"},
+		success:function(data){
+			//var tmpPath = "/data/course/"+data.year+"/"+data.teachingPeriod+"/"+data.course+"/"+data.assignment+"/allCode.zip";
+		document.getElementById("downloadallcode").href= '/data/tmp/allCode.zip';
+		document.getElementById("downloadallcode").click();
+		document.getElementById("downloadallcode").removeAttribute("href");
+	},
+		
+	});
+		 
+	}
+	else{
+		accountall=0;
+	}
+	
+});
+
+
+var account=0;
+
+//upload marks & feedback
+		$('#uploadfeedback').fileinput({
+      //path
+			uploadUrl: '/classList/uploadFeedback',
+			showCaption: true,
+			showUpload: true,
+			showRemove: true,
+			showClose: true,
+			showPreview:true,
+			
+			allowedFileExtensions:['csv'],//format
+			layoutTemplates:{
+					actionDelete: ''
+			},
+			browseClass: 'btn btn-primary'
+			
+	}).on("fileuploaded", function (event, data, previewId, index){
+		$tablenumber.bootstrapTable('refresh');
+		$tablesubmission.bootstrapTable('refresh');
+ });
+
+ var codedownload =0;
+
+window.operateEventscode={
+					
+	'click .downcode':function(e, value, row, index){
+		if(codedownload==0){
+			codedownload++;
+		$.ajax({
+				type:'POST',
+				url:'/classList/downloadOneCode',
+				dataType:'json',
+				data:	row,
+				success:function(data){
+					console.log("down");
+				
+				document.getElementById("downcode").href= '/data/tmp/Code.zip';
+				document.getElementById("downcode").click();
+				document.getElementById("downcode").removeAttribute("href");
+	      },
+				
+		});
+  }
+			else{
+				codedownload=0;
+			}
+		}
+};
+
+//read classList 
+window.operateEventslink={
+'click .mod': function (e, value, row, index) {
+						$.ajax({
+					type:"post",
+					url:'/classlist/chooseStudent',
+					dataType:"json",
+					data:row,
+				});
+				console.log("finsh");
+    }
+};
+			var $tablenumber = $('#tablenumber').bootstrapTable({
+				exportDataType:"all",
+				exportTypes:[ 'csv', 'txt', 'doc', 'excel', 'xlsx', 'pdf'],
+				ajax:function(request){
+					$.ajax({
+						type:"get",
+						url:'/classList/getClassList',
+						dataType:"json",
+						data:'',
+						success:function(msg){
+							request.success({
+								row:msg
+							});
+							$('#tablenumber').bootstrapTable('load',msg);
+						},
+						
+					});
+				},
+				columns:[{
+					field:"IDandName",
+					title:"ID and Name",
+				},
+				{
+        field:"Score",
+        title:"Mark",
+          
+				},
+				{
+					field:"manualMark",
+					title:"Manual Mark",
+        },
+				{
+					field:"feedback",
+					title:"Comment",
+				},
+	         //a link for student information
+				{
+					filed:"Details",
+					title:"Details",
+					events:operateEventslink,
+					formatter:function(value,row,index){
+						var link ="";
+						link ="classlistdetail"+".html";
+						var a='<a class="mod" href='+ '"'+link+'"'+ 'target="_blank">More</a>';
+						return a;
+					},
+					}],
+		});
+</script>
+<script>
+//tab5
+//make  a submssion
+$('#makesubmission').fileinput({
+      //path
+			uploadUrl: '/submission/uploadNewSubmission',
+			showCaption: true,
+			showUpload: true,
+			showRemove: true,
+			showClose: true,
+			showPreview:true,
+			//allowedFileExtensions:['js',],//format
+			layoutTemplates:{
+					actionDelete: ''
+			},
+			browseClass: 'btn btn-primary'
+			
+	}).on("fileuploaded", function (event, data, previewId, index){
+		    $tablesubmission.bootstrapTable('refresh');
+				$tablefeedback.bootstrapTable('refresh');
+				$tablenumber.bootstrapTable('refresh');
+ });
+
+	//show different versions for submission
+	var $tablesubmission=$('#tablesubmission').bootstrapTable({
+			
+			onCheck:function(row){
+				
+				console.log(row);
+					$.ajax({
+						type:"post",
+						url:'/submission/chooseSubmission',
+						dataType:"json",
+						data:row,
+					});
+
+					$tablefeedback.bootstrapTable('refresh');
+              
+				},
+				onUncheck:function(row){
+				$.ajax({
+						type:"post",
+						url:'/submission/chooseSubmission',
+						dataType:"json",
+						data:'',
+					});
+					$tablefeedback.bootstrapTable('refresh');
+			    
+			},
+				
+			ajax:function(request){
+			
+				$.ajax({
+					type:"get",
+					url:'/submission/getSubmissionList',
+					dataType:"json",
+					data:'',
+				
+					success:function(msg){
+						request.success({
+							row:msg
+						});
+						$('#tablesubmission').bootstrapTable('load',msg);
+					},
+				});
+			},
+			columns:[{
+				field:"submission",
+				title:"Submission",
+			},{
+				field:"finalMark",
+				title:"SubmissionScore",
+			},{
+					field:"",
+					title:"",
+					checkbox:true,
+
+				},
+		],
+		formatLoadingMessage:function(){
+			return "Please submit your code";
+		}
+	
+	
+
+	});
+//get submission version  and then show feedback
+	var $tablefeedback=$('#tablefeedback').bootstrapTable({
+			//click option and post this option
+			ajax:function(request){
+				$.ajax({
+					type:"get",
+					url:'/submission/getFeedback',
+					dataType:"json",
+					data:'',
+				
+					success:function(msg){
+						request.success({
+							row:msg
+						});
+						console.log(msg);
+						$('#tablefeedback').bootstrapTable('load',msg);
+					},
+				});
+			},
+			columns:[{
+				field:"feedback",
+				title:"Feedback",
+			},
+		],
+		formatLoadingMessage:function(){
+			return "Please select a submitted version";
+		}
+	});
+</script>
+</body>
+</html>

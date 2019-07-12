@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="html1.css" rel="stylesheet" type="text/css" charset="utf-8"/>
+		
+		<script src="jquery-3.2.1.min.js"></script>
+		<script src="jquery.mockjax.js"></script>
+		<script>
+				$(document).ready(function(){
+					$("#btn1").click(function(){
+						
+						$.mockjax({
+							url:'/GetUserData',
+							status:200,
+							responseTime:50,
+							
+							responseText: "start test"
+
+						});
+						$.ajax({
+							type:'GET',
+							url:'/GetUserData',
+						
+							success:function(data){
+								
+								console.log("ajax");
+								$("#output").html(data);
+
+							},
+							error:function(){
+								alert(error);
+							}
+
+						});
+						
+					});
+					$("#btn2").click(function(){
+						$.mockjax({
+							url:'/GetUserData1',
+							status:200,
+							responseTime:50,
+							
+							responseText: "stop test"
+
+						});
+						$.ajax({
+							type:'GET',
+							url:'/GetUserData1',
+				
+							success:function(data){
+								console.log("ajaxstop");
+								$("#output").html(data);
+							},
+							error:function(){
+								alert(error);
+							}
+					});               
+			  });
+			});
+		</script>
+		<script type="text/javascript">
+			
+        $(function () {
+            $("#upload").click(function () {
+               
+              
+				$.mockjax({
+							url:'/PostUserData',
+							status:200,
+							responseTime:50,
+							responseText: "upload test"
+
+						});
+                $.ajax({
+                    url: '/PostUserData',
+                    type: "POST",
+                	success: function (data) {
+							console.log("ajaxupload");
+							$("#output").html(data);
+                        },
+                    error: function () {
+                        alert("error！");
+                       
+                    }
+                });
+            });
+        });
+  
+		</script>
+        <title>milestone1</title>
+
+	</head>
+    <body>
+		<div><h1 id="title"> milestone1 </h1></div>
+		<div> 
+				<h4 id="choose">Choose a dockerfile:</h4>
+					<input type="file" id="Dockerfile" /><br/>
+				<input type="button" id="upload" value="uploading"/>
+				
+		</div>
+		<div><button type="submit"  id = "btn1">Start</button>
+	    <button type="submit" id = "btn2">Stop</button></div>	
+		<div><textarea rows="3" cols="35" id="output" readonly="read-write-plaintext-only" ></textarea></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		
+	</body>
+</html>

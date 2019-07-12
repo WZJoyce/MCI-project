@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Websubmission</title>
+<link rel="stylesheet" href="css/lib/flatpickr/flatpickr.min.css">
+<link rel="stylesheet" href="css/separate/vendor/flatpickr.min.css">
+<link rel="stylesheet" href="css/separate/vendor/bootstrap-daterangepicker.min.css">
+<link rel="stylesheet" href="css/lib/clockpicker/bootstrap-clockpicker.min.css">
+<link rel="stylesheet" href="css/separate/vendor/bootstrap-select/bootstrap-select.min.css">
+<link rel="stylesheet" href="css/lib/prism/prism.css">
+<link rel="stylesheet" href="css/lib/bootstrap-table/bootstrap-table.min.css">
+<link rel="stylesheet" href="css/lib/bootstrap-table/bootstrap-table-reorder-rows.css">
+<link rel="stylesheet" href="css/lib/lobipanel/lobipanel.min.css">
+<link rel="stylesheet" href="css/separate/vendor/lobipanel.min.css">
+<link rel="stylesheet" href="css/lib/jqueryui/jquery-ui.min.css">
+<link rel="stylesheet" href="css/separate/pages/widgets.min.css">
+<link rel="stylesheet" href="css/separate/vendor/bootstrap-select/bootstrap-select.min.css">
+<link rel="stylesheet" href="css/lib/font-awesome/font-awesome.min.css">
+<link rel="stylesheet" href="css/lib/bootstrap/bootstrap.min.css">
+<link rel="stylesheet" href="css/main.source.css">		
+<link rel="stylesheet" href="bootstrap-fileinput-master/css/fileinput.min.css">
+<link rel="stylesheet" href="kartik-v-bootstrap-fileinput/css/fileinput.min.css">
+</head>
+
+<body class="horizontal-navigation">
+		<header class="site-header">
+				<div class="container-fluid">
+					<a href="#" class="site-logo">
+						 <h2 style="font-family:bold">
+						Submission and Feedback 
+						<input name="nameId" id="nameId" style="color:#0088cc; border:none" readonly></h2>
+					</a>
+					   <div class="site-header-search-container">
+					</div>
+				</div>
+		</header>
+		<div class="page-content">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xl-5">	
+					<section class="box-typical">
+						<div id="toolbarVersion">
+									Versions of submission</div>
+							<div class="table settingheight">
+									<table id="tableVersion"
+										data-toolbar="#toolbarVersion"
+										data-pagination="true"
+										data-search="true"
+										data-use-row-attr-func="true"
+										data-reorderable-rows="true"
+									  data-url="submissionList.json"
+									  data-click-to-select="true"
+										data-single-select="true">
+									<thead>
+										<tr>
+											<th data-field="AssignmentKey" >Versions of submission</th>
+										</tr>
+									</thead>
+								  </table>
+							</div>
+						</section>
+					</div>	
+				<div class="col-xl-7">	
+					<section class="box-typical">
+						<div id="toolbarFeedback">
+										Feedback</div>
+							<div class="table settingheight">
+								<table id="tableFeedback"
+												 data-toolbar="#toolbarFeedback"
+												 data-pagination="true"
+												 data-use-row-attr-func="true"
+												 data-reorderable-rows="true"
+									       data-url="submissionList.json"
+												 data-click-to-select="true"
+												 data-single-select="true">
+								<thead>
+											  <tr>
+												<th data-field="AssignmentKey" >Feedback</th>
+												</tr>
+											</thead>
+											</table>
+										</div>
+									</section>
+								</div>	
+
+							</div>
+
+		</div>
+		</div>
+
+	<script src="js/lib/jquery/jquery-3.2.1.min.js"></script>
+	<script src="js/lib/popper/popper.min.js"></script>
+	<script src="js/lib/tether/tether.min.js"></script>
+	<script src="js/lib/bootstrap/bootstrap.min.js"></script>
+	<script src="js/plugins.js"></script>
+	<script src="jquery.mockjax.js"></script>
+	<script src="js/lib/bootstrap-table/bootstrap-table.js"></script>
+	<script src="js/lib/bootstrap-table/bootstrap-table-reorder-rows.min.js"></script>
+	<script src="js/lib/bootstrap-table/jquery.tablednd.js"></script>
+
+	<script type="text/javascript" src="js/lib/jqueryui/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/lib/lobipanel/lobipanel.min.js"></script>
+	<script type="text/javascript" src="js/lib/match-height/jquery.matchHeight.min.js"></script>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+	<script src="js/lib/bootstrap-select/bootstrap-select.min.js"></script>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	
+	<script type="text/javascript" src="js/lib/moment/moment-with-locales.min.js"></script>
+	<script type="text/javascript" src="js/lib/flatpickr/flatpickr.min.js"></script>
+	<script src="js/lib/clockpicker/bootstrap-clockpicker.min.js"></script>
+	<script src="js/lib/clockpicker/bootstrap-clockpicker-init.js"></script>
+	<script src="js/lib/daterangepicker/daterangepicker.js"></script>
+	<script src="js/lib/bootstrap-select/bootstrap-select.min.js"></script>
+	<script src="js/lib/prism/prism.js"></script>
+
+	 
+	<script src="kartik-v-bootstrap-fileinput/js/fileinput.min.js"></script>
+	
+	<script src="bootstrap-fileinput-master/js/fileinput.min.js"></script>
+	<script src="bootstrap-fileinput-master/js/plugins/piexif.min.js"></script>
+	<script src="bootstrap-fileinput-master/js/plugins/purify.min.js"></script>
+	<script src="bootstrap-fileinput-master/js/plugins/sortable.min.js"></script>
+
+	<script src="js/lib/bootstrap-table/bootstrap-table-export.min.js"></script>
+	<script src="js/lib/bootstrap-table/tableExport.min.js"></script>
+	<script src="tableExport.jquery.plugin-master/libs/FileSaver/FileSaver.min.js"></script>
+	<script src="tableExport.jquery.plugin-master/libs/jsPDF/jspdf.min.js"></script>
+	<script src="tableExport.jquery.plugin-master/libs/jsPDF-AutoTable/jspdf.plugin.autotable.js"></script>
+<script src="js/app.js"></script>
+<script>
+	//人的名字和id
+	$(function(){
+		$.ajax({
+			type: "get",
+				dataType: "json",
+				url: "/classList/getName",
+				data: {"data":data},
+				success:function(data){
+					$("#nameId").val(data);
+
+				}
+
+		})
+ });
+ $('#tableVersion').bootstrapTable({
+				ajax:function(request){
+				
+					$.ajax({
+						type:"get",
+						url:'/classList/getSubmissionList',
+						dataType:"json",
+						data:'',
+					
+						success:function(msg){
+							request.success({
+								row:msg
+							});
+							console.log(msg);
+							$('#tableVersion').bootstrapTable('load',msg);
+						},
+					});
+				},
+				columns:[{
+					field:"submission",
+					title:"Version",
+				},{
+					field:"",
+					title:"",
+					checkbox:true,
+				}
+			],
+			onCheck:function(row){
+			  console.log("333");
+				console.log(row);
+					$.ajax({
+						type:"post",
+						url:'/classList/chooseSubmission',
+						dataType:"json",
+						data:row,	
+					});
+					$tableFeedback.bootstrapTable('refresh');   
+				},
+			onUncheck:function(row){
+				$.ajax({
+						type:"post",
+						url:'/classList/chooseSubmission',
+						dataType:"json",
+						data:row,
+						
+					});
+				$tableFeedback.bootstrapTable('refresh');
+			},
+		});
+
+		var $tableFeedback =  $('#tableFeedback').bootstrapTable({
+				ajax:function(request){
+					$.ajax({
+						type:"get",
+						url:'/classList/getFeedback',
+						dataType:"json",
+						data:'',
+					
+						success:function(msg){
+							request.success({
+								row:msg
+							});
+							console.log(msg);
+							$('#tableFeedback').bootstrapTable('load',msg);
+						},
+					});
+				},
+				columns:[{
+					field:"feedback",
+					title:"Feedback",
+				}
+			],
+			formatLoadingMessage:function(){
+				return"Please select a submitted version";
+			}	
+		});
+</script>
+</body>
+</html>

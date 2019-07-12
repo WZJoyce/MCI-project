@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "convert-csv-to-json": "0.0.14",
+    "csvtojson": "^2.0.8",
+    "extract-zip": "^1.6.7",
+    "moment": "^2.24.0",
+    "unzip2": "^0.2.5"
+  }
+}

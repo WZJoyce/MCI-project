@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Websubmission</title>
+<link rel="stylesheet" href="css/lib/flatpickr/flatpickr.min.css">
+<link rel="stylesheet" href="css/separate/vendor/flatpickr.min.css">
+<link rel="stylesheet" href="css/separate/vendor/bootstrap-daterangepicker.min.css">
+<link rel="stylesheet" href="css/lib/clockpicker/bootstrap-clockpicker.min.css">
+<link rel="stylesheet" href="css/separate/vendor/bootstrap-select/bootstrap-select.min.css">
+<link rel="stylesheet" href="css/lib/prism/prism.css">
+<link rel="stylesheet" href="css/lib/bootstrap-table/bootstrap-table.min.css">
+<link rel="stylesheet" href="css/lib/bootstrap-table/bootstrap-table-reorder-rows.css">
+<link rel="stylesheet" href="css/lib/lobipanel/lobipanel.min.css">
+<link rel="stylesheet" href="css/separate/vendor/lobipanel.min.css">
+<link rel="stylesheet" href="css/lib/jqueryui/jquery-ui.min.css">
+<link rel="stylesheet" href="css/separate/pages/widgets.min.css">
+
+		  
+<link rel="stylesheet" href="css/separate/vendor/bootstrap-select/bootstrap-select.min.css">
+<link rel="stylesheet" href="css/lib/font-awesome/font-awesome.min.css">
+<link rel="stylesheet" href="css/lib/bootstrap/bootstrap.min.css">
+<link rel="stylesheet" href="css/main.source.css">
+<link rel="stylesheet" href="bootstrap-fileinput-master/css/fileinput.min.css">
+<link rel="stylesheet" href="kartik-v-bootstrap-fileinput/css/fileinput.min.css">
+</head>
+
+<body class="horizontal-navigation">
+		<header class="site-header">
+				<div class="container-fluid">
+					<a href="#" class="site-logo">
+						 <h2 style="font-family:bold">Websubmission</h2>
+					</a>
+					   <div class="site-header-search-container">
+					</div>
+				</div>
+		</header>
+		<div class="page-content">
+		<div class="container-fluid">
+			<section class="tabs-section">
+				<div class="tabs-section-nav">
+					<div class="tbl">
+						<ul class="nav" role="tablist">
+							<li class="nav-item" >
+								<a class="nav-link active" href="#tabs-2-tab-1" role="tab" data-toggle="tab">
+									<span class="nav-link-in">
+										Navigation
+									
+									</span>
+								</a>
+							</li>
+						<li class="nav-item">
+								<a class="nav-link" href="#tabs-2-tab-5" role="tab" data-toggle="tab">
+									<span class="nav-link-in" id="submissionTab" style="display:none;" >
+										Make a submission and View feedback
+									</span>
+								</a>
+							</li>
+
+					</ul>
+					</div>
+				</div>
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane fade in active show" id="tabs-2-tab-1">
+							<div class="row">
+									<div class="col-xl-4">
+											<section class="box-typical box-typical-dashboard">
+												<header class="box-typical-header">
+													<div class="tbl-row">
+														<div class="tbl-cell tbl-cell-title">
+															<h3>Year & Teaching Period</h3>
+														</div>
+														<div class="tbl-cell tbl-cell-actions">
+															<button type="button" class="action-btn action-btn-expand">
+																<i class="font-icon font-icon-expand"></i>
+															</button>
+														</div>
+													</div>
+												</header>
+												<div class="box-typical-body">
+													<table class="tbl-typical">
+														<tr>
+															<th><div>Details</div></th>
+															<th><div>Status</div></th>
+														</tr>
+														<form id="form" name="form" method="POST">
+														<tr>
+															<td>
+																<span>Year</span>
+															</td>
+															<td>
+															<fieldset class="form-group">	
+															<select class="select2" id="selection1" name="Year">
+															
+																<option value="2019">2019</option>
+																<option value="2020">2020</option>
+															</select>
+															</fieldset>	
+															</td>	
+														</tr>
+														<tr>
+																<td>
+																	<span>Teaching period</span>
+																</td>
+																<td>
+																<fieldset class="form-group">
+																<select class="select2" id="selection2" name="Teachingperiod" >
+																		<option value="Semester1">Semester 1</option>
+																		<option value="Semester2">Semester 2</option>
+																		<option value="SummerSemester">Summer Semester</option>
+																		<option value="WinterSemester">Winter Semester</option>
+																		<option value="Term1">Term 1</option>
+																		<option value="Term2">Term 2</option>
+																		<option value="Term3">Term 3</option>
+																		<option value="Term4">Term 4</option>
+																</select>
+																</fieldset>	
+																</td>	
+														</tr>	
+														</form>
+													</table>
+												</div>
+											</section>
+									</div>
+										<div class="col-xl-4">
+										<section class="box-typical" >
+										<div id="toolbar"class="myfont">Course</div>
+											<div class="table  settingheight">
+												<table id="table"
+													data-toolbar="#toolbar"
+													data-pagination="true"
+													data-search="true"
+													data-use-row-attr-func="true"
+													data-reorderable-rows="true"
+													data-url="courseList.json"
+													data-click-to-select="true"
+													data-single-select="true"
+													>
+													<thead>
+													<tr>
+														<th data-field="Course" data-sortable="true">Course</th>	
+													</tr>
+													</thead>
+												</table>
+											</div>
+										</section>
+									   </div>
+									   <div class="col-xl-4">
+										<section class="box-typical" >
+											<div id="toolbar2" class="myfont">Assignment</div>
+											<div class="table  settingheight">
+												<table id="table2"
+													data-toolbar="#toolbar2"
+													data-pagination="true"
+													data-search="true"
+													data-use-row-attr-func="true"
+													data-reorderable-rows="true"
+													data-url="assignmentList.json"
+													data-click-to-select="true"
+													data-single-select="true">
+													<thead>
+													<tr>
+														<th data-field="Assignment" data-sortable="true">Assignment</th>		     
+													</tr>
+													</thead>
+												</table>
+											</div>
+										</section>
+									 </div>
+							</div>
+						</div>
+					
+					<div role="tabpanel" class="tab-pane fade" id="tabs-2-tab-5">
+							<div class="row" >
+									<div class="col-xl-3" >
+											<input type="file" id="makesubmission" name="file"/>
+										<div style="position:relative ;top:10px" class="myfont">	Make submission</div>
+									</div>
+									<div class="col-xl-4">
+											<section class="box-typical">
+												<div id="toolbarsubmission" class="myfont">Submission</div>
+												<div class="table settingheight" >
+													<table id="tablesubmission"
+														data-toolbar="#toolbarsubmission"
+														data-pagination="true"
+														data-search="true"
+														data-use-row-attr-func="true"
+														data-reorderable-rows="true"
+														data-url="submissionList.json"
+														data-click-to-select="true"
+														data-single-select="true"
+														>
+														<thead>
+														<tr>
+															<th data-field="submission" data-sortable="true">Submission</th>
+															<th data-field="submissionScore" data-sortable="true">Score</th>
+														</tr>
+														</thead>
+													</table>
+												</div>
+								</div>
+								<div class="col-xl-5">
+										<section class="box-typical">
+											<div id="toolbarfeedback" class="myfont">Feedback</div>
+											<div class="table settingheight">
+												<table id="tablefeedback"
+													data-toolbar="#toolbarfeedback"
+													data-pagination="true"
+													data-use-row-attr-func="true"
+													data-reorderable-rows="true"
+													data-url="submissionList.json"	
+													data-click-to-select="true"
+													data-single-select="true"
+													>
+													<thead>
+													<tr>
+														<th data-field="feedback">Feedback</th>	
+													</tr>
+													</thead>
+												</table>
+											</div>
+							</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+
+
+			
+
+	<script src="js/lib/jquery/jquery-3.2.1.min.js"></script>
+	<script src="js/lib/popper/popper.min.js"></script>
+	<script src="js/lib/tether/tether.min.js"></script>
+	<script src="js/lib/bootstrap/bootstrap.min.js"></script>
+	<script src="js/plugins.js"></script>
+	  <script src="jquery.mockjax.js"></script>
+	<script src="js/lib/bootstrap-table/bootstrap-table.js"></script>
+	<script src="js/lib/bootstrap-table/bootstrap-table-reorder-rows.min.js"></script>
+	<script src="js/lib/bootstrap-table/jquery.tablednd.js"></script>
+
+	<script type="text/javascript" src="js/lib/jqueryui/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/lib/lobipanel/lobipanel.min.js"></script>
+	<script type="text/javascript" src="js/lib/match-height/jquery.matchHeight.min.js"></script>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+	<script src="js/lib/bootstrap-select/bootstrap-select.min.js"></script>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	
+	<script type="text/javascript" src="js/lib/moment/moment-with-locales.min.js"></script>
+	<script type="text/javascript" src="js/lib/flatpickr/flatpickr.min.js"></script>
+	<script src="js/lib/clockpicker/bootstrap-clockpicker.min.js"></script>
+	<script src="js/lib/clockpicker/bootstrap-clockpicker-init.js"></script>
+	<script src="js/lib/daterangepicker/daterangepicker.js"></script>
+	<script src="js/lib/bootstrap-select/bootstrap-select.min.js"></script>
+	<script src="js/lib/prism/prism.js"></script>
+
+	 
+	<script src="kartik-v-bootstrap-fileinput/js/fileinput.min.js"></script>
+	
+	<script src="bootstrap-fileinput-master/js/fileinput.min.js"></script>
+	<script src="bootstrap-fileinput-master/js/plugins/piexif.min.js"></script>
+	<script src="bootstrap-fileinput-master/js/plugins/purify.min.js"></script>
+	<script src="bootstrap-fileinput-master/js/plugins/sortable.min.js"></script>
+
+	<script src="js/lib/bootstrap-table/bootstrap-table-export.min.js"></script>
+	<script src="js/lib/bootstrap-table/tableExport.min.js"></script>
+	<script src="tableExport.jquery.plugin-master/libs/FileSaver/FileSaver.min.js"></script>
+	<script src="tableExport.jquery.plugin-master/libs/jsPDF/jspdf.min.js"></script>
+	<script src="tableExport.jquery.plugin-master/libs/jsPDF-AutoTable/jspdf.plugin.autotable.js"></script>
+<script src="js/app.js"></script>
+<script>
+	
+</script>
+
+<script>  
+
+//navigation page
+$(function(){
+	//year   default 2019
+		$("#selection1").ready(function(){
+		  var data1=$("#selection1").val();			
+				$.ajax({						
+					type:'POST',
+					url:'/navigation/year',
+					dataType:'json',
+					data:	{"year":data1},
+ 					success:function(data){
+							console.log("post88");
+							console.log(data);
+						},
+				});
+			});
+		});
+$(function(){
+//change year
+$("#selection1").change(function(){
+  var data1=$("#selection1").val();	
+		$.ajax({
+			type:'POST',
+			url:'/navigation/year',
+			dataType:'json',
+			data:	{"year":data1},
+			 success:function(data){
+					console.log("post88");
+					console.log(data);
+				},
+		});
+
+	 //change year semester
+		$table.bootstrapTable('refresh');	
+		$table2.bootstrapTable('refresh');	
+		$tablesubmission.bootstrapTable('refresh');
+		$tablefeedback.bootstrapTable('refresh');
+		document.getElementById("submissionTab").style.display="none";	
+	});
+
+});
+$(function(){
+//teaching period default
+$("#selection2").ready(function(){
+	console.log("yessemester");
+  var data1=$("#selection2").val();			
+		$.ajax({			
+			type:'POST',
+			url:'/navigation/teachingPeriod',
+			dataType:'json',
+			data:	{"teachingPeriod":data1},
+			 success:function(data){
+					console.log("post88");
+					console.log(data);
+				},
+		});			
+	});
+});
+//teaching period
+$(function(){
+		$("#selection2").change(function(){
+		  var data1=$("#selection2").val();		
+				$.ajax({
+							
+					type:'POST',
+					url:'/navigation/teachingPeriod',
+					dataType:'json',
+					data:	{"teachingPeriod":data1},
+ 					success:function(data){
+							console.log("post88");
+							console.log(data);
+						},
+				});
+				$table.bootstrapTable('refresh');
+				$table2.bootstrapTable('refresh');
+				$tableCourse.bootstrapTable('refresh');
+				$tablesubmission.bootstrapTable('refresh');
+				$tablefeedback.bootstrapTable('refresh');
+				document.getElementById("assignmentTab").style.display="none";
+				document.getElementById("classistTab").style.display="none";
+				document.getElementById("submissionTab").style.display="none";	
+						
+			});
+		});
+
+//    load course
+	var $table=$('#table').bootstrapTable({
+			 //load course
+			ajax:function(request){
+				$.ajax({
+					type:"get",
+					url:'/navigation/getCourseStu',
+					dataType:"json",
+					data:'',
+					success:function(msg){
+						console.log("agin");
+						console.log(msg);
+						request.success({
+							row:msg
+						});
+						
+						$('#table').bootstrapTable('load',msg);
+					},
+				});
+			},
+			columns:[{
+				field:"AnchorText2",
+				title:"Course",
+			},{
+					field:"",
+					title:"",
+					checkbox:true,
+
+				},
+		],
+		onCheck:function(row){
+			  console.log("eee");
+				console.log(row);
+					$.ajax({
+						type:"post",
+						url:'/navigation/course',
+						dataType:"json",
+						data:row,
+					});
+					//refresh assingment
+					$table2.bootstrapTable('refresh');
+					$tablesubmission.bootstrapTable('refresh');
+					$tablefeedback.bootstrapTable('refresh');
+					document.getElementById("submissionTab").style.display="none";	
+				},
+			onUncheck:function(row){
+				$.ajax({
+						type:"post",
+						url:'/navigation/course',
+						dataType:"json",
+						data:row,
+					});
+				$table2.bootstrapTable('refresh');
+				$tablesubmission.bootstrapTable('refresh');
+				$tablefeedback.bootstrapTable('refresh');
+				document.getElementById("submissionTab").style.display="none"; 
+			},
+	});
+//assignment
+var $table2=$('#table2').bootstrapTable({
+	//pick and post to the end-back
+	onCheck:function(row){
+		console.log(row);
+					$.ajax({
+						type:"post",
+						url:'/navigation/assignment',
+						dataType:"json",
+						data:row,
+					});
+					$tablesubmission.bootstrapTable('refresh');
+					$tablefeedback.bootstrapTable('refresh');
+					//when choose a assingment
+					document.getElementById("submissionTab").style.display="";
+				},//load assignment
+			onUncheck:function(row){
+			document.getElementById("submissionTab").style.display="none";
+			},
+			ajax:function(request){
+				$.ajax({
+					type:"get",
+					url:'/navigation/getAssignmentStu',
+					dataType:"json",
+					data:'',
+					success:function(msg){
+						request.success({
+							row:msg
+						});
+						console.log(msg);
+						$('#table2').bootstrapTable('load',msg);
+					},
+					
+				});
+			},
+			columns:[{
+				field:"AnchorText",
+				title:"Assignment",
+			
+					},{
+					field:"",
+					title:"",
+					checkbox:true,
+				},
+		],
+		formatLoadingMessage:function(){
+			return "Please select a course";
+		}	
+	});	
+</script>
+
+<script>
+//tab5
+//make  a submssion
+$('#makesubmission').fileinput({
+      //path
+			uploadUrl: '/submission/uploadNewSubmission',
+			showCaption: true,
+			showUpload: true,
+			showRemove: true,
+			showClose: true,
+			showPreview:true,	
+			//allowedFileExtensions:[],//format
+			layoutTemplates:{
+					actionDelete: ''
+			},
+			browseClass: 'btn btn-primary'
+			
+	}).on("fileuploaded", function (event, data, previewId, index){
+		     $tablesubmission.bootstrapTable('refresh');
+				$tablefeedback.bootstrapTable('refresh');
+ });
+	//show the versions ofsubmission
+	var $tablesubmission=$('#tablesubmission').bootstrapTable({
+			onCheck:function(row){
+				console.log(row);
+					$.ajax({
+						type:"post",
+						url:'/submission/chooseSubmission',
+						dataType:"json",
+						data:row,
+					});
+					$tablefeedback.bootstrapTable('refresh'); 
+				},
+				onUncheck:function(row){
+				$.ajax({
+						type:"post",
+						url:'/submission/chooseSubmission',
+						dataType:"json",
+						data:row,
+					});
+					$tablefeedback.bootstrapTable('refresh'); 
+			},	
+			ajax:function(request){
+			
+				$.ajax({
+					type:"get",
+					url:'/submission/getSubmissionList',
+					dataType:"json",
+					data:'',
+				
+					success:function(msg){
+						request.success({
+							row:msg
+						});
+						$('#tablesubmission').bootstrapTable('load',msg);
+					},
+		
+				});
+			},
+			columns:[{
+				field:"submission",
+				title:"Submission",
+			},{
+				field:"finalMark",
+				title:"SubmissionScore",
+			},{
+					field:"",
+					title:"",
+					checkbox:true,
+
+				},
+		],
+		formatLoadingMessage:function(){
+			return "Please submit your code";
+		}	
+	});
+//pick submission version  and then show feedback
+	var $tablefeedback=$('#tablefeedback').bootstrapTable({
+			ajax:function(request){
+				$.ajax({
+					type:"get",
+					url:'/submission/getFeedbackStu',
+					dataType:"json",
+					data:'',
+				
+					success:function(msg){
+						request.success({
+							row:msg
+						});
+						$('#tablefeedback').bootstrapTable('load',msg);
+					},
+				});
+			},
+			columns:[{
+				field:"feedback",
+				title:"Feedback",
+			},
+		],
+		formatLoadingMessage:function(){
+			return "Please select a submitted version";
+		}
+	});
+
+
+
+</script>
+
+
+
+</body>
+</html>
